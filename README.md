@@ -16,7 +16,7 @@ Each line represents a new audio and they are divided in 2 parts each, separated
 
 ## Usage
 
-To run this scripts, make sure you have the file `input.txt` in the project root path with the content you want to synthesize and also an existing folder called `audios`, where the files will be put when created.
+To run this script, be sure you have the file `input.txt` in the project root path with the content you want to synthesize and also an existing folder called `audios`, where the files will be put when created.
 
 Install dependencies:
 
@@ -32,9 +32,11 @@ npm start
 
 ## Premises
 
-You need to have the Google Cloud environment configured and authenticated as well as the TTS API enable in your machine before you are able to run this script.
+You need to have the Google Cloud environment configured and authenticated in your machine before you are able to run this script.
 
-To get further information on how to do this, please take a look at the [Google Cloud Platform official content](https://cloud.google.com/text-to-speech/docs/quickstart-protocol).
+You also need to enable the [Cloud Text-To-Speech](https://cloud.google.com/text-to-speech/) service in your GCP account.
+
+Get further information on how to do this at the [Google Cloud Platform official content](https://cloud.google.com/text-to-speech/docs/quickstart-protocol).
 
 ## Author
 
