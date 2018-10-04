@@ -1,0 +1,30 @@
+{
+  "name": "google-tts",
+  "version": "1.0.0",
+  "description": "Text synthesizer using Google TTS API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bolzon <blzn@mail.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^0.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolzon/google-tts.git"
+  },
+  "keywords": [
+    "tts",
+    "nodejs",
+    "google",
+    "gcp"
+  ],
+  "bugs": {
+    "url": "https://github.com/bolzon/google-tts/issues"
+  },
+  "homepage": "https://github.com/bolzon/google-tts#readme"
+}
