@@ -1,17 +1,24 @@
 const tts = require('@google-cloud/text-to-speech');
 
+const AudioEncodingEnum = {
+  MP3: 'MP3',
+  LINEAR16: 'LINEAR16',
+  OGG_OPUS: 'OGG_OPUS',
+  AUDIO_ENCODING_UNSPECIFIED: 'AUDIO_ENCODING_UNSPECIFIED'
+};
+
 class TtsService {
 
   constructor() {
     this.ttsClient = new tts.TextToSpeechClient();
   }
 
-  speech(text) {
+  speech(text, encoding) {
     const self = this;
     const request = {
       input: { text },
-      audioConfig: { audioEncoding: 'MP3' },
-      voice: { languageCode: 'pt-BR', ssmlGender: 'FEMALE' }
+      voice: { languageCode: 'pt-BR', ssmlGender: 'FEMALE' },
+      audioConfig: { audioEncoding: 'LINEAR16', sampleRateHertz: 8000 }
     };
     return new Promise((resolve, reject) => {
       self.ttsClient.synthesizeSpeech(request, (err, response) => 

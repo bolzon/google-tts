@@ -34,7 +34,7 @@ const TtsService = require('./tts-service');
       .replace(/[óòöôõ]/, 'o').replace(/[ÓÒÖÔÕ]/, 'O')
       .replace(/[úùüûũ]/, 'u').replace(/[ÚÙÜÛŨ]/, 'U')
       .replace(/[éèëê]/,  'e').replace(/[ÉÈËÊ]/,  'E')
-      .replace(/[ç]/, 'c').replace(/[Ç]/, 'C') + '.mp3';
+      .replace(/[ç]/, 'c').replace(/[Ç]/, 'C') + '.wav';
       
     const filePath = path.join(__dirname, 'audios', fileName);
     const exists = fs.existsSync(filePath);
