@@ -7,7 +7,12 @@
 
 if [ -d 'audios' ]
 then
-    mkdir audios
+    mkdir -p audios
+fi
+
+if [ -d 'audios/gsm' ]
+then
+    mkdir -p audios/gsm
 fi
 
 if [ -z $1 ]
@@ -24,5 +29,5 @@ fi
 # converts mp3 files to gsm (gsm files will be in gsm folder)
 for f in audios/*.$AUDIO_EXTENSION; do
     F=$(echo $f | sed "s/\.$AUDIO_EXTENSION//")
-    sox $f -r 8000 -c 1 audios/gsm/$F.gsm
+    sox $f -r 8000 -c 1 $F.gsm
 done
