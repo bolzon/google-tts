@@ -4,6 +4,7 @@ const TtsService = require('./tts-service');
 
 (async () => {
 
+  const startDate = Date.now();
   const ttsService = new TtsService();
   const data = fs.readFileSync('input.txt');
   const lines = data.toString().split(/[\r\n]/);
@@ -35,10 +36,10 @@ const TtsService = require('./tts-service');
       .replace(/[úùüûũ]/, 'u').replace(/[ÚÙÜÛŨ]/, 'U')
       .replace(/[éèëê]/,  'e').replace(/[ÉÈËÊ]/,  'E')
       .replace(/[ç]/, 'c').replace(/[Ç]/, 'C') + '.wav';
-      
+
     const filePath = path.join(__dirname, 'audios', fileName);
     const exists = fs.existsSync(filePath);
-    
+
     if (exists) {
       console.log(`Already exists`);
       console.log(`  file = ${fileName}`);
@@ -53,6 +54,6 @@ const TtsService = require('./tts-service');
     }
   }
 
-  console.log('Done.');
+  console.log(`\nDone! (${Date.now() - startDate}ms)\n`);
 
 })();
