@@ -12,11 +12,11 @@ Each line represents a new audio and they are divided in 2 parts each, separated
 3. <audio_name_no_spaces>[TAB]<text-or-phrase-to-speech>
 ```
 
-> If any line can't be understood by script, it will tell you the line numbers that are invalid.
+> If any line can't be understood by script, it will inform you the line numbers that were invalid.
 
 ## Usage
 
-To run this script, be sure you have the file `input.txt` in the project root path with the content you want to synthesize and also an existing folder called `audios`, where the files will be put when created.
+To run this script, be sure you have the file `input.txt` in the project root path with the content you want to synthesize and also an existing folder called `audios`, that will be the output folder for the audios created.
 
 Install dependencies:
 
@@ -32,7 +32,7 @@ npm start
 
 ## Premises
 
-You need to have the Google Cloud environment configured and authenticated in your machine before you are able to run this script.
+You need to have the Google Cloud environment configured and authenticated in your machine before being able to run this script.
 
 You also need to enable the [Cloud Text-To-Speech](https://cloud.google.com/text-to-speech/) service in your GCP account.
 
